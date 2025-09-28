@@ -50,7 +50,17 @@ let project = Project(
             // Uncomment this line and comment the `buildableFolders` then `tuist generate` will run fine
 //            sources: ["MyProjTests/**"],
             resources: ["MyProjTests/**/*.json"],
-            buildableFolders: [.folder("MyProjTests")],
+            buildableFolders: [
+                .folder(
+                    "MyProjTests",
+                    exceptions: [
+                        .exception(excluded: [
+                            "MyProjTests/AddCurrency/add-currency-response.json",
+                            "MyProjTests/**/*.json",
+                        ])
+                    ]
+                )
+            ],
             dependencies: [
                 .target(name: "MyProj"),
             ],
