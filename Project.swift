@@ -52,7 +52,7 @@ let project = Project(
                     "MyProjTests",
                     exceptions: [
                         .exception(excluded: [
-                            "**/*.json",
+                            "**/*.png",
                         ])
                     ]
                 )
