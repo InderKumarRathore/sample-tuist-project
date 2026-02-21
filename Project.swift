@@ -47,16 +47,12 @@ let project = Project(
             product: .unitTests,
             bundleId: "com.ikr.MyProjTests",
             infoPlist: .default,
-            // Uncomment this line and comment the `buildableFolders` then `tuist generate` will run fine
-//            sources: ["MyProjTests/**"],
-            resources: ["MyProjTests/**/*.json"],
             buildableFolders: [
                 .folder(
                     "MyProjTests",
                     exceptions: [
                         .exception(excluded: [
-                            "MyProjTests/AddCurrency/add-currency-response.json",
-                            "MyProjTests/**/*.json",
+                            "**/*.json",
                         ])
                     ]
                 )
